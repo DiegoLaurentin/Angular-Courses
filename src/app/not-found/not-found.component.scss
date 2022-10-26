@@ -1,0 +1,25 @@
+.NotFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+img {
+  width: 60%;
+  padding-bottom: 20px;
+}
+p {
+  text-align: center;
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  img {
+    width: 50%;
+  }
+}
+/* Large and up */
+@media screen and (min-width: 64em) {
+  img {
+    width: 30%;
+  }
+}
