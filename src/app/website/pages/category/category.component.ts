@@ -18,7 +18,7 @@ export class CategoryComponent implements OnInit {
   categoryId: string | null = null;
   productId: string | null = null;
   products: Product[] = [];
-  limit = 10;
+  limit = 18;
   offset = 0;
 
   constructor(

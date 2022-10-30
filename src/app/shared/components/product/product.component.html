@@ -1,10 +1,18 @@
-<a [routerLink]="['/product', product.id]">
-  <app-img *ngIf="product.images.length > 0" [img]="product.images[0]"></app-img>
-</a>
-<h2 class="title">{{ product.price | currency }}</h2>
-<p>{{ product.title }}</p>
-<p class="category">{{ product.category?.name }}</p>
+<div  class="product">
+  <div class="product-detail">
+    <a [routerLink]="['/product', product.id]">
+      <app-img *ngIf="product.images.length > 0" [img]="product.images[0]"></app-img>
+    </a>
+    <div class="product-info">
+      <div>
+        <h2 class="price">{{ product.price | currency }}</h2>
+        <p class="title">{{ product.title }}</p>
+      </div>
+      <button class="addToCart" (click)="onAddToCart()"><img src="./../../../../assets/images/bt_add_to_cart copy.png" alt=""></button>
+    </div>
+  </div>
+</div>
 
-<a routerLink="." [queryParams]="{ product: product.id }">Ver Detalle</a>
+<!-- <p class="category">{{ product.category?.name }}</p> -->
+<!-- <a routerLink="." [queryParams]="{ product: product.id }">Ver Detalle</a> -->
 <!-- <button (click)="onShowDetail()">Ver detalle</button> -->
-<button (click)="onAddToCart()">Add cart</button>

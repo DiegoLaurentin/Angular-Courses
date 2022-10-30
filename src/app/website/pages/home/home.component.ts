@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
 
   products: Product[] = [];
   productId: string | null = null
-  limit = 10;
+  limit = 50;
   offset = 0;
 
   constructor(
@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.productsService.getAll(10, 0).subscribe((data) => {
+    this.productsService.getAll(18, 0).subscribe((data) => {
       this.products = data;
       this.offset += this.limit;
     });

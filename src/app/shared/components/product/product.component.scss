@@ -1,9 +1,40 @@
 p, h2 {
   margin: 0;
 }
-.title {
-  font-weight: bold;
+.product {
+  min-width: none;
+  // width: 260px;
+  max-width: 266px;
+  // cursor: pointer;
 }
-.category {
-  font-style: italic;
+.product-image {
+  cursor: pointer;
+}
+.product-detail{
+  padding: 0;
+}
+.product-info {
+  display: flex;
+  justify-content: space-between;
+}
+.price {
+  margin-top: 15px;
+  font-weight: 700;
+  // font-weight: bold;
+  font-style: normal;
+  font-size: 16px;
+
+}
+.title {
+  margin-top: 5px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+}
+.addToCart {
+  top: 50%;
+  right: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
 }

@@ -1,0 +1,78 @@
+.register {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  justify-content: center;
+}
+
+
+.register h1 {
+  place-items: center;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  &.invalid {
+    label {
+      color: #D25050;
+    }
+    input{
+      border: 1px solid #D25050;
+      background-color: #FFF9F9;
+    }
+  }
+}
+
+.input-group label {
+  margin-bottom: 6px;
+}
+
+.input-group input {
+  margin-bottom: 24px;
+  width: 339px;
+  height: 42px;
+  border-radius: 5px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  font-size: 16;
+  padding-left: 8px;
+  border-color: transparent;
+  background-color: #F7F7F7;
+}
+
+.input-group input::placeholder{
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.button {
+  width: 351px;
+  height: 59px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  border: 2px solid #ACD9B2;
+  border-radius: 10px;
+  color: #ACD9B2;
+  background-color: white;
+  cursor: pointer;
+}
+
+.button:disabled {
+  background-color: #E7E7E7;
+  border-color: transparent;
+  color: white;
+  cursor: default;
+}
+
+.button:enabled:hover {
+    border-color: transparent;
+    background-color: #ACD9B2;
+    color: white;
+    cursor: pointer;
+}

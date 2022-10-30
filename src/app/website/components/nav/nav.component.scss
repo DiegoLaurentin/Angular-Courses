@@ -85,7 +85,18 @@
     .account {
       margin-right: .5em;
     }
-
+    .login {
+      background: none;
+      border: none;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      color: #ACD9B2;
+    }
+    .profile-email {
+      text-decoration: none;
+      color: black;
+    }
   }
 }
 

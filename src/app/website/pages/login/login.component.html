@@ -1,1 +1,17 @@
-<p>login works!</p>
+<div class="register">
+  <form #myForm="ngForm">
+
+    <div class="input-group" >
+      <label>Email Address</label>
+      <input type="text" name="email" required placeholder="camila.yokoo@gmail.com" fill="">
+    </div>
+
+    <div class="input-group">
+      <label>Password</label>
+      <input type="password" minlength="8" name="password" required placeholder="*******">
+    </div>
+
+    <button [disabled]="myForm.invalid" class="button" type="submit" >Create</button>
+
+  </form>
+</div>

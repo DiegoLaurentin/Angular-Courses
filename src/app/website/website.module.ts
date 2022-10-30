@@ -6,6 +6,7 @@ import { WebsiteRoutingModule } from './website-routing.module';
 import { SharedModule } from '../shared/shared.module'
 
 import { NavComponent } from './components/nav/nav.component';
+import { FormsModule } from '@angular/forms';
 
 // Pages - Router
 import { HomeComponent } from './pages/home/home.component';
@@ -29,12 +30,13 @@ import { LayoutComponent } from './components/layout/layout.component';
     RecoveryComponent,
     ProfileComponent,
     ProductDetailComponent,
-    LayoutComponent
+    LayoutComponent,
   ],
   imports: [
     CommonModule,
     WebsiteRoutingModule,
     SwiperModule,
+    FormsModule,
     SharedModule
   ]
 })
