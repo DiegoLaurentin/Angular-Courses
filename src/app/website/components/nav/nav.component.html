@@ -24,7 +24,6 @@
     </ul>
     <button routerLink="login" class="login" *ngIf="!profile; else elseBlock">Login</button>
     <ng-template #elseBlock>
-      <hr>
       <a class="profile-email" routerLink="/profile">{{ profile?.email }} <img src="./../../../../assets/images/Path.png" alt=""></a>
       <button class="logout" (click)="logout()">Logout</button>
     </ng-template>
