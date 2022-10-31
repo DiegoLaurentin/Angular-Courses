@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+
+import { Router } from '@angular/router';
 
 import { AuthService } from 'src/app/services/auth.service';
 
@@ -13,20 +15,33 @@ import { UsersService } from 'src/app/services/users.service';
 })
 export class LoginComponent implements OnInit{
 
-  profile: User | null = null
+  emailDefault = 'admin@mail.com'
+  passwordDefault = 'admin123'
+
+  email: string = (<HTMLInputElement>document.getElementById('email'))?.value
+  password: string = (<HTMLInputElement>document.getElementById('password'))?.value
+
+  user: User | null = null
+
 
   constructor(
     private authService: AuthService,
-    private userService: UsersService
+    private userService: UsersService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
   this.authService.user$
   .subscribe(data => {
-    this.profile = data
+    this.user = data
   })
+  }
 
-
+  login() {
+    this.authService.loginAndGet(this.email, this.password)
+    .subscribe(() => {
+      this.router.navigate(['/home'])
+    });
   }
 
 }

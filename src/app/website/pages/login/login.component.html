@@ -1,17 +1,47 @@
 <div class="register">
   <form #myForm="ngForm">
-
-    <div class="input-group" >
-      <label>Email Address</label>
-      <input type="text" name="email" required placeholder="camila.yokoo@gmail.com" fill="">
-    </div>
-
     <div class="input-group">
-      <label>Password</label>
-      <input type="password" minlength="8" name="password" required placeholder="*******">
+      <div
+        class="input-group"
+        [ngClass]="{
+          valid: nameInputPassword.valid,
+          invalid: nameInputPassword.invalid
+        }"
+      >
+        <label>Email Address</label>
+        <input
+          type="text"
+          name="email"
+          id="email"
+          required
+          placeholder="admin@mail.com"
+          [(ngModel)]="email"
+          #nameInputEmail="ngModel"
+        />
+      </div>
+      <div
+        class="input-group"
+        [ngClass]="{
+          valid: nameInputPassword.valid,
+          invalid: nameInputPassword.invalid
+        }"
+      >
+        <label>Password</label>
+        <input
+          type="password"
+          id="password"
+          minlength="8"
+          name="password"
+          required
+          placeholder="*******"
+          #nameInputPassword="ngModel"
+          [(ngModel)]="password"
+        />
+      </div>
     </div>
-
-    <button [disabled]="myForm.invalid" class="button" type="submit" >Create</button>
-
+    <div class="button-seccion">
+      <button class="button" (click)="login()">Log In</button>
+      <button class="button-quick-access" type="submit">Quick Access</button>
+    </div>
   </form>
 </div>

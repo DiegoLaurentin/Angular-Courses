@@ -14,9 +14,15 @@
 .input-group {
   display: flex;
   flex-direction: column;
+  font-size: 16px;
   font-family: 'Quicksand', sans-serif;
   font-weight: bold;
-  &.invalid {
+  &.valid {
+    input{
+      border: 2px solid #ACD9B2;
+    }
+  }
+  .invalid {
     label {
       color: #D25050;
     }
@@ -24,6 +30,9 @@
       border: 1px solid #D25050;
       background-color: #FFF9F9;
     }
+  }
+  input {
+    font-size: 16px;
   }
 }
 
@@ -56,10 +65,10 @@
   font-family: 'Quicksand', sans-serif;
   font-weight: 700;
   font-size: 18px;
-  border: 2px solid #ACD9B2;
+  border: none;
   border-radius: 10px;
-  color: #ACD9B2;
-  background-color: white;
+  color: white;
+  background-color: #ACD9B2;
   cursor: pointer;
 }
 
@@ -71,8 +80,31 @@
 }
 
 .button:enabled:hover {
-    border-color: transparent;
-    background-color: #ACD9B2;
-    color: white;
+    border: 2px solid #ACD9B2;
+    background-color: white;
+    color: #ACD9B2;
     cursor: pointer;
+}
+
+.button-quick-access {
+  margin: 50px 0;
+  width: 351px;
+  height: 59px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  border: 2px solid #ACD9B2;
+  border-radius: 10px;
+  color: #ACD9B2;
+  background-color: white;
+  cursor: pointer;
+  &:hover {
+    color: white;
+    background-color: #ACD9B2;
+  }
+}
+
+.button-seccion {
+  display: flex;
+  flex-direction: column;
 }
