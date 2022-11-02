@@ -15,15 +15,15 @@ import { ProductsService } from '../../../services/products.service';
 export class ProductDetailComponent {
 
   @Input() product: Product = {
-    id: '2',
-    price: 631,
+    id: '',
+    price: 0,
     images: [],
-    title: 'Refined Fresh Computer',
+    title: '',
     category: {
-      id: 2,
+      id: -1,
       name: '',
     },
-    description: 'Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support'
+    description: ''
   };
 
   @Input() products: Product[] = [];

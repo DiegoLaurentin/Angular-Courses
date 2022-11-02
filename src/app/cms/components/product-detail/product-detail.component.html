@@ -1,9 +1,6 @@
 <div class="product-detail">
   <p class="product-id">{{ product.id }}</p>
-  <app-img
-    *ngIf="product.images.length > 0"
-    [img]="product.images[0]"
-  ></app-img>
+  <app-img></app-img>
   <div>
     <p class="product-title">{{ product.title }}</p>
     <p class="product-category">{{ product.category }}</p>
