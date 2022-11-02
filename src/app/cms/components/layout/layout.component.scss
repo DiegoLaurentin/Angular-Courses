@@ -1,37 +1,115 @@
-div {
+.hide-mobile {
   display: grid;
   height: 100vh;
-  grid-template-columns: 220px 1fr;
-  grid-template-rows: auto 1fr;
-  grid-template-areas:
-      "header header header"
-      "nav content content";
-  header {
-    grid-area: header;
-    background-color: #3E51B5;
-    color: white;
-    padding: 1em;
-    box-shadow: 1px 2px 4px 0 rgb(21 99 157 / 16%);
-    border-bottom: 1px solid rgba(21,99,157,0.16);
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "header header header"
+        "nav content content";
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .logotype {
+    margin-top: 12px;
+    background-color: #292931;
+    border-radius: 5%;
+    width: 194px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   nav {
     grid-area: nav;
     border-right: 1px solid rgba(21,99,157,0.16);
-    background-color: #fff;
+    background-color: #181820;
+    ul {
+      margin-top: 50px;
+    }
+    li {
+      padding: 10px 40px;
+      display: flex;
+      margin-bottom: 10px;
+      &.active {
+        background-color: #ACD9B2;
+        border-radius: 5px;
+      }
+    }
+    li:hover {
+      background: #292931;
+      border-radius: 5px;
+      &.active {
+        background: #ACD9B2;
+      }
+    }
     a {
-      margin: 0;
+      margin-left: 15px;
       padding: 0;
-      padding: 1em;
       cursor: pointer;
       position: relative;
       display: block;
       text-decoration: none;
-      color: #000;
+      color: white;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    .secundary-menu {
+      height: 30vh;
+    }
+    .br {
+      // border: 2px solid ;
+      margin-bottom: 20px;
+      width: 192px;
+      height: 2px;
+      background-color: #797979;
+    }
+    .user, .user a {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-top: 60px;
+      margin-left: 0;
+      margin-bottom: 12px;
+      width: 192px;
+      height: 50px;
+      border-radius: 5px;
+      background-color: #292931;
+      color: white;
+      > img {
+        margin-left: 6px;
+        width: 34px;
+        height: 34px;
+      }
+      .user-info {
+        margin-left: 8px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      h3 {
+        font-weight: 700;
+        font-size: 14px;
+        color: white;
+      }
+      p {
+        font-weight: 500;
+        font-size: 12px;
+        color: #797979;
+      }
     }
   }
   main {
     grid-area: content;
-    background-color: #f3f8fb;
+    background-color: #23232B;
     padding: 1em;
   }
 }
+

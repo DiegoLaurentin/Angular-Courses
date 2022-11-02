@@ -2,23 +2,21 @@ import { Component, OnInit, Input } from '@angular/core';
 
 import {
   Product,
-  CreateProductDTO,
 } from '../../../models/product.model';
 import { ProductsService } from '../../../services/products.service';
 
 @Component({
-  selector: 'app-grid',
-  templateUrl: './grid.component.html',
-  styleUrls: ['./grid.component.scss']
+  selector: 'app-product-table',
+  templateUrl: './product-table.component.html',
+  styleUrls: ['./product-table.component.scss']
 })
-export class GridComponent {
+export class ProductTableComponent {
 
   @Input() products: Product[] = [];
 
   constructor(
-  
+    private productsService: ProductsService
   ) { }
-
 
 
 }

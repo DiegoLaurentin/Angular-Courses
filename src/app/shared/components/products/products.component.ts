@@ -24,6 +24,7 @@ export class ProductsComponent {
       this.onShowDetail(id)
     }
   };
+  
   @Output() loadMore = new EventEmitter();
 
   myShoppingCart: Product[] = [];

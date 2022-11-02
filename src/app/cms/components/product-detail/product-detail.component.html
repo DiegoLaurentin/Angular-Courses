@@ -1,0 +1,22 @@
+<div class="product-detail">
+  <p class="product-id">{{ product.id }}</p>
+  <app-img
+    *ngIf="product.images.length > 0"
+    [img]="product.images[0]"
+  ></app-img>
+  <div>
+    <p class="product-title">{{ product.title }}</p>
+    <p class="product-category">{{ product.category }}</p>
+    <p class="product-description">{{ product.description }}</p>
+    <p class="product-price">{{ product.price | currency }}</p>
+  </div>
+
+  <div class="options-buttons">
+    <button class="Edit">
+      <img src="../../../../assets/svg/edit.svg" alt="" />
+    </button>
+    <button class="Delete" (click)="deleteProduct()">
+      <img src="../../../../assets/svg/Delete.svg" alt="" />
+    </button>
+  </div>
+</div>

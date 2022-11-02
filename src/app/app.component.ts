@@ -24,7 +24,7 @@ export class AppComponent implements OnInit{
     const token = this.tokenService.getToken();
     if (token) {
       this.authService.getProfile()
-      .subscribe
+      .subscribe()
     }
   }
 

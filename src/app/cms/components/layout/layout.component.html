@@ -1,12 +1,51 @@
-<div>
-  <header>
-    <h3>Yarn - Store</h3>
-  </header>
+<div class="hide-mobile">
   <nav>
-    <ul>
-      <li><a routerLink="grid">Grid Page</a></li>
-      <li><a routerLink="tasks">Tasks Page</a></li>
-    </ul>
+    <div class="content">
+
+      <div class="logotype">
+        <a href="/home"><img src="../../../../assets/svg/logo_yard_sale-Dark.svg" alt="" /></a>
+      </div>
+
+      <ul class="Principal-menu">
+        <li routerLinkActive="active">
+          <img src="../../../../assets/svg/dashboard.svg" />
+          <a routerLink="grid">Dashboard</a>
+        </li>
+        <li routerLinkActive="active">
+          <img src="../../../../assets/svg/user-profile.svg" />
+          <a  routerLink="user Profile">User Profile</a>
+        </li>
+        <li routerLinkActive="active">
+          <img src="../../../../assets/svg/Tasks.svg" />
+          <a routerLink="tasks">Tasks</a>
+        </li>
+        <li routerLinkActive="active">
+          <img src="../../../../assets/svg/Notifications.svg"/>
+          <a routerLink="Notifications">Notifications</a>
+        </li>
+      </ul>
+
+      <ul class="Secundary-menu">
+        <div class="br"></div>
+        <li routerLinkActive="active">
+          <img src="../../../../assets/svg/Settings.svg"/>
+          <a routerLink="Notifications">Settings</a>
+        </li>
+        <li routerLinkActive="active">
+          <img src="../../../../assets/svg/Logout.svg"/>
+          <a (click)="logout()">Logout</a>
+        </li>
+      </ul>
+
+      <a routerLink="/profile" class="user">
+        <img src="../../../../assets/images/profile-image.png" alt="">
+        <div class="user-info">
+          <h3>Diego Laurentin</h3>
+          <p>ID: 123341</p>
+        </div>
+      </a>
+
+    </div>
   </nav>
   <main>
     <router-outlet></router-outlet>
